@@ -58,7 +58,7 @@ git clone https://github.com/haruma-kurita/linear_regression.git
 4. Click "Knit" to generate the HTML report
 
 ## View Results
-[Click here to view the HTML report](https://htmlpreview.github.io/?https://github.com/haruma-kurita/linear_regression/blob/main/analysis.html)
+[[Click here to view the HTML report](https://htmlpreview.github.io/?https://github.com/haruma-kurita/linear_regression/blob/main/analysis.html)](https://github.com/haruma-kurita/linear_regression/blob/main/bmi_regression.html)
 
 ## Visualizations
 The analysis includes:
