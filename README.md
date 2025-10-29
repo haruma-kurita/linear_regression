@@ -58,12 +58,11 @@ git clone https://github.com/haruma-kurita/linear_regression.git
 4. Click "Knit" to generate the HTML report
 
 ## View Results
-[https://github.com/haruma-kurita/linear_regression/blob/main/bmi_regression.html]
+https://github.com/haruma-kurita/linear_regression/blob/main/bmi_regression.html
 
 ## Visualizations
 The analysis includes:
 - Scatterplot of Age vs BMI with regression line
-- Diagnostic plots for model validation (residuals, Q-Q plot, etc.)
 
 ## Interpretation
 While age has a statistically significant relationship with BMI, the moderate R² value (0.166) indicates that age alone is not sufficient to predict BMI accurately. This finding suggests that BMI is influenced by multiple factors beyond age, including:
