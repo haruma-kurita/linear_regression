@@ -23,7 +23,6 @@ library(tidyverse)
 # Inspect the data
 head(NHANES)
 nrow(NHANES)
-summary(NHANES)
 
 # Check the NA
 sum(is.na(NHANES$Age))
@@ -58,3 +57,4 @@ ggplot(data_clean, aes(x = Age, y = BMI)) +
 ```
 
 The R^2^ value from the linear model was 0.1664, a p-value less than 0.001, and the F-statistic was 1922. This indicates that that age does have an effect on BMI with highly statistically significant values from the tests. Age has a moderate effect on BMI but the other 83% of the BMI variation comes from other factors.
+
