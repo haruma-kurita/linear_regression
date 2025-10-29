@@ -1,0 +1,60 @@
+---
+title: "Linear Regression Age Vs. BMI"
+author: "Haruma Kurita"
+date: "2025-10-28"
+output: html_document
+---
+
+## Introduction
+
+This project investigates whether age affects Body Mass Index (BMI) using the NHANES (National Health and Nutrition Examination Survey) dataset.
+
+### Research Question
+Does age have a significant relationship with BMI?
+```{r}
+# Load the libraries
+library(ggplot2)
+library(NHANES)
+library(tidyverse)
+```
+
+## Data Exploration
+```{r}
+# Inspect the data
+head(NHANES)
+nrow(NHANES)
+summary(NHANES)
+
+# Check the NA
+sum(is.na(NHANES$Age))
+sum(is.na(NHANES$BMI))
+```
+
+## Data Cleaning
+```{r}
+# Removing the NA and creating a new data frame
+data_clean <- NHANES |> 
+  filter(!is.na(Age) & !is.na(BMI)) |> 
+  select(Age, BMI)
+sum(is.na(data_clean))
+```
+
+## Linear Regression Analysis
+```{r}
+# Making a linear model
+model <- lm(BMI ~ Age, data = data_clean)
+summary(model)
+
+# Making a scatterplot
+ggplot(data_clean, aes(x = Age, y = BMI)) +
+  geom_point(alpha = 0.1) +
+  geom_smooth(method = "lm", se = TRUE) +
+  labs(
+    title = "Relationship Between Age and BMI",
+    x = "Age in Years",
+    y = "BMI"
+  ) +
+  theme_minimal()
+```
+
+The R^2^ value from the linear model was 0.1664, a p-value less than 0.001, and the F-statistic was 1922. This indicates that that age does have an effect on BMI with highly statistically significant values from the tests. Age has a moderate effect on BMI but the other 83% of the BMI variation comes from other factors.
