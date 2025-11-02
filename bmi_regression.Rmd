@@ -11,7 +11,7 @@ This project investigates whether age affects Body Mass Index (BMI) using the NH
 
 ### Research Question
 Does age have a significant relationship with BMI?
-```{r}
+```{r, results='hide'}
 # Load the libraries
 library(ggplot2)
 library(NHANES)
@@ -57,4 +57,5 @@ ggplot(data_clean, aes(x = Age, y = BMI)) +
 ```
 
 The R^2^ value from the linear model was 0.1664, a p-value less than 0.001, and the F-statistic was 1922. This indicates that that age does have an effect on BMI with highly statistically significant values from the tests. Age has a moderate effect on BMI but the other 83% of the BMI variation comes from other factors.
+
 
